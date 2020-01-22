@@ -3,9 +3,6 @@
 
 #define SPECIES_AEGISLASH 0
 
-#define ITEM_KEE_BERRY 202
-#define ITEM_MARANGA_BERRY 203
-
 #define GEN_3 0
 #define GEN_4 1
 #define GEN_5 2
