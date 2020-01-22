@@ -1,8 +1,6 @@
 #ifndef GUARD_CONSTANTS_BATTLE_CONFIG_H
 #define GUARD_CONSTANTS_BATTLE_CONFIG_H
 
-#define SPECIES_AEGISLASH 0
-
 #define GEN_3 0
 #define GEN_4 1
 #define GEN_5 2
