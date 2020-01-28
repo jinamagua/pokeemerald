@@ -1,6 +1,7 @@
 gText_Birch_Welcome:: @ 82C897B
 	.string "Hi! Sorry to keep you waiting!\p"
 	.string "Welcome to the world of POKéMON!\p"
+	.string "This is Emerald 2020.\p"
 	.string "My name is BIRCH.\p"
 	.string "But everyone calls me the POKéMON\n"
 	.string "PROFESSOR.\p"
@@ -43,10 +44,10 @@ gText_Birch_SoItsPlayer:: @ 82C8C1C
 	.string "So it's {PLAYER}{KUN}?$"
 
 gText_Birch_YourePlayer:: @ 82C8C2A
-	.string "Ah, okay!\p"
+	.string "Okay!\p"
 	.string "You're {PLAYER}{KUN} who's moving to my\n"
 	.string "hometown of LITTLEROOT.\l"
-	.string "I get it now!\p"
+	.string "There we go!\p"
 	.string "$"
 
 gText_Birch_AreYouReady:: @ 82C8C7A

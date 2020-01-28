@@ -293,7 +293,7 @@ Route101_Text_WildPokemonInTallGrass: @ 81EC04A
 	.string "Wild POKéMON will jump out at you in\n"
 	.string "tall grass.\p"
 	.string "If you want to catch POKéMON, you have\n"
-	.string "to go into the tall grass and search.$"
+	.string "search in the tall grass.$"
 
 Route101_Text_RouteSign: @ 81EC0C8
 	.string "ROUTE 101\n"
