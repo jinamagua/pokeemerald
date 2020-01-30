@@ -262,6 +262,13 @@
             "elevation": 0,
             "x": 6,
             "y": 16
+        },
+        {
+            "dest_map": "MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB",
+            "dest_warp_id": 0,
+            "elevation": 0,
+            "x": 16,
+            "y": 15
         }
     ],
     "weather": "WEATHER_SUNNY"
