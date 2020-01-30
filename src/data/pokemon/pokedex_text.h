@@ -5,19 +5,19 @@ const u8 gDummyPokedexText[] = _(
     "at this time.");
 
 const u8 gBulbasaurPokedexText[] = _(
-    "Bulbasaur can be seen napping in bright\n"
+    "BULBASAUR can be seen napping in bright\n"
     "sunlight. There is a seed on its back.\n"
     "By soaking up the sun's rays, the seed\n"
     "grows progressively larger.");
 
 const u8 gIvysaurPokedexText[] = _(
-    "To support its bulb, Ivysaur's legs\n"
+    "To support its bulb, IVYSAUR's legs\n"
     "grow sturdy. If it spends more time lying in\n"
     "the sunlight, the bud will soon bloom into\n"
     "a large flower.");
 
 const u8 gVenusaurPokedexText[] = _(
-    "Venusaur's flower is said to take on vivid\n"
+    "VENASAUR's flower is said to take on vivid\n"
     "colors if it gets plenty of nutrition and\n"
     "sunlight. The flower's aroma soothes the\n"
     "emotions of people.");
