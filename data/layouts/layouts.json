@@ -4409,6 +4409,16 @@
             "primary_tileset": "gTileset_Building",
             "secondary_tileset": "gTileset_MysteryEventsHouse",
             "width": 11
+        },
+        {
+            "blockdata_filepath": "data/layouts/OmireIsland/map.bin",
+            "border_filepath": "data/layouts/OmireIsland/border.bin",
+            "height": 36,
+            "id": "LAYOUT_OMIRE_ISLAND",
+            "name": "OmireIsland_Layout",
+            "primary_tileset": "gTileset_General",
+            "secondary_tileset": "gTileset_Slateport",
+            "width": 44
         }
     ],
     "layouts_table_label": "gMapLayouts"
