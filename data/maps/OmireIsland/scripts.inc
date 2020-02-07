@@ -12,3 +12,5 @@ OmireIsland_EventScript_TownSign::
 OmireIsland_Text_TownSign:
 	.string "OMIRE ISLAND\p"
 	.string "Where the ocean is kept at bay.$"
+
+
