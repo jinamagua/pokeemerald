@@ -4,6 +4,14 @@
     "allow_running": true,
     "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
     "bg_events": [
+        {
+            "elevation": 0,
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "OmireIsland_EventScript_TownSign",
+            "type": "sign",
+            "x": 21,
+            "y": 14
+        }
     ],
     "connections": null,
     "coord_events": [
@@ -14,6 +22,19 @@
     "music": "MUS_DAN02",
     "name": "OmireIsland",
     "object_events": [
+        {
+            "elevation": 3,
+            "flag": "0",
+            "graphics_id": "EVENT_OBJ_GFX_WOMAN_3",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+            "script": "NULL",
+            "trainer_sight_or_berry_tree_id": "0",
+            "trainer_type": "0",
+            "x": 11,
+            "y": 18
+        }
     ],
     "region_map_section": "MAPSEC_NONE",
     "requires_flash": false,
@@ -23,8 +44,8 @@
             "dest_map": "MAP_LITTLEROOT_TOWN",
             "dest_warp_id": 1,
             "elevation": 0,
-            "x": 11,
-            "y": 13
+            "x": 16,
+            "y": 14
         }
     ],
     "weather": "WEATHER_SUNNY"

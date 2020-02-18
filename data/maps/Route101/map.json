@@ -11,14 +11,6 @@
             "type": "sign",
             "x": 5,
             "y": 9
-        },
-        {
-            "elevation": 3,
-            "flag": "FLAG_UNUSED_0x020",
-            "item": "ITEM_POTION",
-            "type": "hidden_item",
-            "x": 17,
-            "y": 15
         }
     ],
     "connections": [

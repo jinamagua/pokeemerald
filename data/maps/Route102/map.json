@@ -19,14 +19,6 @@
             "type": "sign",
             "x": 40,
             "y": 9
-        },
-        {
-            "elevation": 3,
-            "flag": "FLAG_UNUSED_0x881",
-            "item": "ITEM_NET_BALL",
-            "type": "hidden_item",
-            "x": 33,
-            "y": 5
         }
     ],
     "connections": [
