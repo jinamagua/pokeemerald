@@ -381,11 +381,64 @@ static void (*const gMovementStatusHandler[])(struct LinkPlayerEventObject *, st
     MovementStatusHandler_TryAdvanceScript,
 };
 
+
+static const u32 BasePenaltyByBadge[] = 
+{
+    16, 32, 48, 64, 92, 128, 160, 200, 240
+};
+
+u32 WhiteOutBasePenalty() {
+    if (FlagGet(FLAG_BADGE08_GET)) {
+        return BasePenaltyByBadge[8];
+    }
+    if (FlagGet(FLAG_BADGE07_GET)) {
+        return BasePenaltyByBadge[7];
+    }
+    if (FlagGet(FLAG_BADGE06_GET)) {
+        return BasePenaltyByBadge[6];
+    }
+    if (FlagGet(FLAG_BADGE05_GET)) {
+        return BasePenaltyByBadge[5];
+    }
+    if (FlagGet(FLAG_BADGE04_GET)) {
+        return BasePenaltyByBadge[4];
+    }
+    if (FlagGet(FLAG_BADGE03_GET)) {
+        return BasePenaltyByBadge[3];
+    }
+    if (FlagGet(FLAG_BADGE02_GET)) {
+        return BasePenaltyByBadge[2];
+    }
+    if (FlagGet(FLAG_BADGE01_GET)) {
+        return BasePenaltyByBadge[1];
+    }
+    return BasePenaltyByBadge[0];
+}
+
 // code
 void DoWhiteOut(void)
 {
+    u8 monsCount, i;
+
+    u32 currLvl, totalPenalty;
+    
+    monsCount = CalculatePlayerPartyCount();
+    
+    currLvl = 1;
+
+    for (i = 0; i < monsCount; i++)
+    {
+        if (!GetMonData(&gPlayerParty[i], MON_DATA_SANITY_IS_EGG)
+            && GetMonData(&gPlayerParty[i], MON_DATA_LEVEL) > currLvl)
+        {
+            currLvl = GetMonData(&gPlayerParty[i], MON_DATA_LEVEL);
+        }
+    }
+
+    totalPenalty = WhiteOutBasePenalty() * currLvl;
+
     ScriptContext2_RunNewScript(EventScript_WhiteOut);
-    SetMoney(&gSaveBlock1Ptr->money, GetMoney(&gSaveBlock1Ptr->money) / 2);
+    SetMoney(&gSaveBlock1Ptr->money, GetMoney(&gSaveBlock1Ptr->money) - totalPenalty);
     HealPlayerParty();
     Overworld_ResetStateAfterWhiteOut();
     SetWarpDestinationToLastHealLocation();
