@@ -35,6 +35,14 @@
             "type": "sign",
             "x": 12,
             "y": 8
+        },
+        {
+            "elevation": 0,
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "LittlerootTown_EventScript_StrangeHouseSign",
+            "type": "sign",
+            "x": 16,
+            "y": 17
         }
     ],
     "connections": [
@@ -156,8 +164,8 @@
             "script": "LittlerootTown_EventScript_FatMan",
             "trainer_sight_or_berry_tree_id": "0",
             "trainer_type": "0",
-            "x": 12,
-            "y": 13
+            "x": 11,
+            "y": 11
         },
         {
             "elevation": 3,
@@ -169,7 +177,7 @@
             "script": "LittlerootTown_EventScript_Boy",
             "trainer_sight_or_berry_tree_id": "0",
             "trainer_type": "0",
-            "x": 14,
+            "x": 11,
             "y": 17
         },
         {
@@ -265,10 +273,10 @@
         },
         {
             "dest_map": "MAP_OMIRE_ISLAND",
-            "dest_warp_id": 0,
+            "dest_warp_id": 2,
             "elevation": 0,
-            "x": 16,
-            "y": 15
+            "x": 15,
+            "y": 16
         }
     ],
     "weather": "WEATHER_SUNNY"

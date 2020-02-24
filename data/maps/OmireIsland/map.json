@@ -42,7 +42,7 @@
     "warp_events": [
         {
             "dest_map": "MAP_LITTLEROOT_TOWN",
-            "dest_warp_id": 1,
+            "dest_warp_id": 2,
             "elevation": 0,
             "x": 16,
             "y": 14

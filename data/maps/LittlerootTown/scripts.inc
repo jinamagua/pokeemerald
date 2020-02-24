@@ -955,6 +955,10 @@ LittlerootTown_EventScript_GiveRunningShoes:: @ 81E8693
 	delay 30
 	return
 
+LittlerootTown_EventScript_StrangeHouseSign::
+	msgbox LittlerootTown_Text_StrangeHouse, MSGBOX_DEFAULT
+	return
+
 LittlerootTown_Text_OurNewHomeLetsGoInside: @ 81E86BC
 	.string "MOM: {PLAYER}, we're here, honey!\p"
 	.string "It must be tiring riding with our things\n"
@@ -1064,4 +1068,10 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab: @ 81E8DA2
 	.string "I gave you?\p"
 	.string "I have something to show you.\n"
 	.string "Let's go to my LAB.$"
+
+
+LittlerootTown_Text_StrangeHouse:
+	.string "No one's home. The sign says\p"
+	.string "they're on vacation.$"
+
 
