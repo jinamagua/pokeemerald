@@ -384,7 +384,7 @@ static void (*const gMovementStatusHandler[])(struct LinkPlayerEventObject *, st
 
 static const u32 BasePenaltyByBadge[] = 
 {
-    16, 32, 48, 64, 92, 128, 160, 200, 240
+    16, 32, 48, 64, 92, 128, 144, 164, 196
 };
 
 u32 WhiteOutBasePenalty() {
