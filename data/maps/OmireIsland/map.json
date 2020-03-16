@@ -13,7 +13,13 @@
             "y": 14
         }
     ],
-    "connections": null,
+    "connections": [
+        {
+            "direction": "right",
+            "map": "MAP_ROUTE135",
+            "offset": 0
+        }
+    ],
     "coord_events": [
     ],
     "id": "MAP_OMIRE_ISLAND",
@@ -33,25 +39,25 @@
             "trainer_sight_or_berry_tree_id": "0",
             "trainer_type": "0",
             "x": 12,
-            "y": 20
+            "y": 28
         },
         {
             "elevation": 3,
             "flag": "0",
             "graphics_id": "EVENT_OBJ_GFX_SAILOR",
-            "movement_range_x": 3,
-            "movement_range_y": 2,
+            "movement_range_x": 2,
+            "movement_range_y": 3,
             "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
-            "script": "NULL",
+            "script": "OmireIsland_EventScript_Resting_Sailor",
             "trainer_sight_or_berry_tree_id": "0",
             "trainer_type": "0",
-            "x": 18,
-            "y": 26
+            "x": 19,
+            "y": 24
         },
         {
             "elevation": 3,
             "flag": "0",
-            "graphics_id": "EVENT_OBJ_GFX_MAN_1",
+            "graphics_id": "EVENT_OBJ_GFX_CAMPER",
             "movement_range_x": 0,
             "movement_range_y": 0,
             "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
@@ -59,12 +65,38 @@
             "trainer_sight_or_berry_tree_id": "0",
             "trainer_type": "0",
             "x": 12,
-            "y": 28
+            "y": 20
         },
         {
             "elevation": 3,
             "flag": "0",
-            "graphics_id": "EVENT_OBJ_GFX_CAMPER",
+            "graphics_id": "EVENT_OBJ_GFX_TUBER_M",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "movement_type": "MOVEMENT_TYPE_WANDER_DOWN_AND_UP",
+            "script": "NULL",
+            "trainer_sight_or_berry_tree_id": "0",
+            "trainer_type": "0",
+            "x": 39,
+            "y": 35
+        },
+        {
+            "elevation": 3,
+            "flag": "0",
+            "graphics_id": "EVENT_OBJ_GFX_SWIMMER_F",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+            "script": "OmireIsland_EventScript_Sand_Girl",
+            "trainer_sight_or_berry_tree_id": "0",
+            "trainer_type": "0",
+            "x": 41,
+            "y": 29
+        },
+        {
+            "elevation": 3,
+            "flag": "0",
+            "graphics_id": "EVENT_OBJ_GFX_PICNICKER",
             "movement_range_x": 1,
             "movement_range_y": 1,
             "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
@@ -77,15 +109,15 @@
         {
             "elevation": 3,
             "flag": "0",
-            "graphics_id": "EVENT_OBJ_GFX_SWIMMER_F",
-            "movement_range_x": 0,
-            "movement_range_y": 0,
-            "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+            "graphics_id": "EVENT_OBJ_GFX_GIRL_2",
+            "movement_range_x": 5,
+            "movement_range_y": 1,
+            "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
             "script": "NULL",
             "trainer_sight_or_berry_tree_id": "0",
             "trainer_type": "0",
-            "x": 41,
-            "y": 29
+            "x": 27,
+            "y": 34
         }
     ],
     "region_map_section": "MAPSEC_SEVII_ISLE_23",
@@ -94,7 +126,7 @@
     "warp_events": [
         {
             "dest_map": "MAP_LITTLEROOT_TOWN",
-            "dest_warp_id": 2,
+            "dest_warp_id": 0,
             "elevation": 0,
             "x": 16,
             "y": 14

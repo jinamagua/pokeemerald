@@ -589,6 +589,7 @@
 
 // Map Group 34
 #define MAP_OMIRE_ISLAND (0 | (34 << 8))
+#define MAP_ROUTE135     (1 | (34 << 8))
 
 #define MAP_GROUPS_COUNT 35
 

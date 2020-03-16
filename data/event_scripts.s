@@ -1061,3 +1061,5 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/text/birch_speech.inc"
 
 	.include "data/maps/OmireIsland/scripts.inc"
+
+	.include "data/maps/Route135/scripts.inc"

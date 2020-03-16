@@ -4419,6 +4419,16 @@
             "primary_tileset": "gTileset_General",
             "secondary_tileset": "gTileset_Slateport",
             "width": 52
+        },
+        {
+            "blockdata_filepath": "data/layouts/Route135/map.bin",
+            "border_filepath": "data/layouts/Route135/border.bin",
+            "height": 44,
+            "id": "LAYOUT_ROUTE135",
+            "name": "Route135_Layout",
+            "primary_tileset": "gTileset_General",
+            "secondary_tileset": "gTileset_Sootopolis",
+            "width": 60
         }
     ],
     "layouts_table_label": "gMapLayouts"
