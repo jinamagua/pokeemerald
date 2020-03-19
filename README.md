@@ -21,9 +21,9 @@ This rom-hack builds on DizzyEgg's expansions on pret's decompilation of Pokemon
 
 The highlight of this rom-hack is to add a post-game story. Beating the elite four will also unlock access to the outer Hoenn Islands.
 
-For new additions, see TODO:
+For new additions, see [ADDITIONS.md](ADDITIONS.md)
 
-For changes from Pokemon Emerald see TODO:
+For changes from Pokemon Emerald see [TWEAKS.md](TWEAKS.md)
 
 ## Acknowledgements
 
