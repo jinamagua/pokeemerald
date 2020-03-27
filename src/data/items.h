@@ -327,7 +327,7 @@ const struct Item gItems[] =
     {
         .name = _("CHERISH BALL"),
         .itemId = ITEM_CHERISH_BALL,
-        .price = 100,
+        .price = 500,
         .description = sCherishBallDesc,
         .pocket = POCKET_POKE_BALLS,
         .type = 11,
@@ -341,7 +341,7 @@ const struct Item gItems[] =
     {
         .name = _("SPORT BALL"),
         .itemId = ITEM_SPORT_BALL,
-        .price = 100,
+        .price = 1000,
         .description = sSportBallDesc,
         .pocket = POCKET_POKE_BALLS,
         .type = 11,
@@ -355,7 +355,7 @@ const struct Item gItems[] =
     {
         .name = _("PARK BALL"),
         .itemId = ITEM_PARK_BALL,
-        .price = 10,
+        .price = 1000,
         .description = sParkBallDesc,
         .pocket = POCKET_POKE_BALLS,
         .type = 11,
@@ -369,7 +369,7 @@ const struct Item gItems[] =
     {
         .name = _("DREAM BALL"),
         .itemId = ITEM_DREAM_BALL,
-        .price = 100,
+        .price = 1000,
         .description = sDreamBallDesc,
         .pocket = POCKET_POKE_BALLS,
         .type = 11,

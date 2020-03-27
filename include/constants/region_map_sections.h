@@ -220,7 +220,7 @@
 #define MAPSEC_ROUTE_135					0xD6
 
 
-#define MAPSEC_NONE                         0xD7
+#define MAPSEC_NONE                         0xFC
 
 #define METLOC_SPECIAL_EGG                  0xFD
 #define METLOC_IN_GAME_TRADE                0xFE

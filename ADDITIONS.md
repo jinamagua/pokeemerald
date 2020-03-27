@@ -14,7 +14,7 @@ you will not come to visit Omire Island until after beating the Elite Four.
 
 #### Omire Island
 
-To the south of Hoenn lies Omire Island. The markets there sell a myriad of items for both andventure and home. 
+To the south of Hoenn lies Omire Island. The markets there sell a myriad of items for adventure and home. 
 The beach attracts trainers and vacationers alike, so you will be able to find hotels and vacation homes.
 
 #### Route 135

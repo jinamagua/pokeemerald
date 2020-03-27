@@ -87,7 +87,7 @@ EverGrandeCity_HallOfFame_Text_HereWeHonorLeagueChampions: @ 822990E
 	.string "WALLACE: This room…\p"
 	.string "This is where we keep records of\n"
 	.string "POKéMON that prevailed through\l"
-	.string "harsh battles.\p"
+	.string "the toughest of battles.\p"
 	.string "It is here that the LEAGUE CHAMPIONS\n"
 	.string "are honored.$"
 

@@ -58,10 +58,10 @@
             "elevation": 3,
             "flag": "0",
             "graphics_id": "EVENT_OBJ_GFX_CAMPER",
-            "movement_range_x": 0,
-            "movement_range_y": 0,
+            "movement_range_x": 1,
+            "movement_range_y": 1,
             "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
-            "script": "NULL",
+            "script": "OmireIsland_EventScript_AdventureClerk",
             "trainer_sight_or_berry_tree_id": "0",
             "trainer_type": "0",
             "x": 12,
@@ -126,10 +126,10 @@
     "warp_events": [
         {
             "dest_map": "MAP_LITTLEROOT_TOWN",
-            "dest_warp_id": 0,
+            "dest_warp_id": 2,
             "elevation": 0,
-            "x": 16,
-            "y": 14
+            "x": 24,
+            "y": 22
         }
     ],
     "weather": "WEATHER_SUNNY"
