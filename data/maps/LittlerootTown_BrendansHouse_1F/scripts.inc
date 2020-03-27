@@ -301,13 +301,11 @@ PlayersHouse_1F_Text_IsntItNiceInHere: @ 81F7A1C
 
 PlayersHouse_1F_Text_MoversPokemonGoSetClock: @ 81F7A46
 	.string "The mover's POKéMON do all the work\n"
-	.string "of moving us in and cleaning up after.\l"
-	.string "This is so convenient!\p"
-	.string "{PLAYER}, your room is upstairs.\n"
-	.string "Go check it out, dear!\p"
-	.string "DAD bought you a new clock to mark\n"
-	.string "our move here.\l"
-	.string "Don't forget to set it!$"
+	.string "of moving us in and cleaning up after.\p"
+	.string "{PLAYER}, your room is upstairs.\l"
+	.string "Go check it out, dear!\n"
+	.string "DAD bought you a new clock. Don't \l"
+	.string "forget to set it!$"
 
 PlayersHouse_1F_Text_ArentYouInterestedInRoom: @ 81F7B24
 	.string "MOM: Well, {PLAYER}?\p"
@@ -323,8 +321,7 @@ PlayersHouse_1F_Text_OhComeQuickly: @ 81F7B96
 	.string "Quick! Come quickly!$"
 
 PlayersHouse_1F_Text_MaybeDadWillBeOn: @ 81F7BBC
-	.string "MOM: Look! It's PETALBURG GYM!\n"
-	.string "Maybe DAD will be on!$"
+	.string "MOM: Look! It's PETALBURG GYM!\n$"
 
 PlayersHouse_1F_Text_ItsOverWeMissedHim: @ 81F7BF1
 	.string "MOM: Oh… It's over.\p"
@@ -332,8 +329,7 @@ PlayersHouse_1F_Text_ItsOverWeMissedHim: @ 81F7BF1
 	.string "Too bad.$"
 
 PlayersHouse_1F_Text_GoIntroduceYourselfNextDoor: @ 81F7C35
-	.string "Oh, yes.\n"
-	.string "One of DAD's friends lives in town.\p"
+	.string "One of DAD's friends lives in town.\n"
 	.string "PROF. BIRCH is his name.\p"
 	.string "He lives right next door, so you should\n"
 	.string "go over and introduce yourself.$"
@@ -346,16 +342,15 @@ PlayersHouse_1F_Text_DidYouMeetProfBirch: @ 81F7CD8
 	.string "PROF. BIRCH?$"
 
 PlayersHouse_1F_Text_YouShouldRestABit: @ 81F7D08
-	.string "MOM: How are you doing, {PLAYER}?\n"
-	.string "You look a little tired.\p"
+	.string "MOM: How are you doing, {PLAYER}?\p"
 	.string "I think you should rest a bit.$"
 
 PlayersHouse_1F_Text_TakeCareHoney: @ 81F7D5C
 	.string "MOM: Take care, honey!$"
 
 PlayersHouse_1F_Text_GotDadsBadgeHeresSomethingFromMom: @ 81F7D73
-	.string "MOM: Oh? Did DAD give you that BADGE?\p"
-	.string "Then here's something from your MOM!$"
+	.string "MOM: Oh? You got that BADGE from DAD?\p"
+	.string "Then here's something from MOM!$"
 
 PlayersHouse_1F_Text_DontPushYourselfTooHard: @ 81F7DBE
 	.string "Don't push yourself too hard, dear.\n"
@@ -431,7 +426,7 @@ PlayersHouse_1F_Text_LatiEmergencyNewsFlash: @ 81F826F
 	.string "We bring you this emergency\n"
 	.string "news flash!\p"
 	.string "In various HOENN locales, there have\n"
-	.string "been reports of a BZZT…colored\l"
+	.string "been reports of a BRZZT…colored\l"
 	.string "POKéMON in flight.\p"
 	.string "The identity of this POKéMON is\n"
 	.string "currently unknown.\p"
