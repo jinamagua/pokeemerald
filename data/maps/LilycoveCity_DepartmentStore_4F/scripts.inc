@@ -28,6 +28,7 @@ LilycoveCity_DepartmentStore_4F_Pokemart_AttackTMs: @ 821FE20
 	.2byte ITEM_TM38  @ Fire Blast
 	.2byte ITEM_TM25  @ Thunder
 	.2byte ITEM_TM14  @ Blizzard
+	.2byte ITEM_TM19  @ Giga Drain
 	.2byte ITEM_TM15  @ Hyper Beam
 	.2byte ITEM_NONE
 	release

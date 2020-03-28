@@ -32,14 +32,14 @@
             "elevation": 3,
             "flag": "0",
             "graphics_id": "EVENT_OBJ_GFX_WOMAN_3",
-            "movement_range_x": 0,
-            "movement_range_y": 0,
+            "movement_range_x": 1,
+            "movement_range_y": 1,
             "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
-            "script": "NULL",
+            "script": "OmireIsland_EventScript_GeneralClerk",
             "trainer_sight_or_berry_tree_id": "0",
             "trainer_type": "0",
             "x": 12,
-            "y": 28
+            "y": 20
         },
         {
             "elevation": 3,
@@ -57,15 +57,15 @@
         {
             "elevation": 3,
             "flag": "0",
-            "graphics_id": "EVENT_OBJ_GFX_CAMPER",
+            "graphics_id": "EVENT_OBJ_GFX_BEAUTY",
             "movement_range_x": 1,
             "movement_range_y": 1,
             "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
-            "script": "OmireIsland_EventScript_AdventureClerk",
+            "script": "OmireIsland_EventScript_FarmersMarket",
             "trainer_sight_or_berry_tree_id": "0",
             "trainer_type": "0",
             "x": 12,
-            "y": 20
+            "y": 21
         },
         {
             "elevation": 3,
@@ -118,6 +118,32 @@
             "trainer_type": "0",
             "x": 27,
             "y": 34
+        },
+        {
+            "elevation": 3,
+            "flag": "0",
+            "graphics_id": "EVENT_OBJ_GFX_SCIENTIST_2",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+            "script": "OmireIsland_EventScript_TMClerk",
+            "trainer_sight_or_berry_tree_id": "0",
+            "trainer_type": "0",
+            "x": 12,
+            "y": 26
+        },
+        {
+            "elevation": 3,
+            "flag": "0",
+            "graphics_id": "EVENT_OBJ_GFX_LASS",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+            "script": "OmireIsland_EventScript_MiscMerchant",
+            "trainer_sight_or_berry_tree_id": "0",
+            "trainer_type": "0",
+            "x": 12,
+            "y": 27
         }
     ],
     "region_map_section": "MAPSEC_SEVII_ISLE_23",
