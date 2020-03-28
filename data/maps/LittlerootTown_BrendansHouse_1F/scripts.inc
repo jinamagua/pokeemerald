@@ -297,11 +297,11 @@ LittlerootTown_BrendansHouse_1F_Movement_BrendanGoUpstairs2: @ 81F7A16
 
 PlayersHouse_1F_Text_IsntItNiceInHere: @ 81F7A1C
 	.string "MOM: See, {PLAYER}?\n"
-	.string "Isn't it nice in here, too?$"
+	.string "Isn't it nice in here?$"
 
 PlayersHouse_1F_Text_MoversPokemonGoSetClock: @ 81F7A46
-	.string "The mover's POKéMON do all the work\n"
-	.string "of moving us in and cleaning up after.\p"
+	.string "The mover's POKéMON are helping us\n"
+	.string "move in.\p"
 	.string "{PLAYER}, your room is upstairs.\l"
 	.string "Go check it out, dear!\n"
 	.string "DAD bought you a new clock. Don't \l"

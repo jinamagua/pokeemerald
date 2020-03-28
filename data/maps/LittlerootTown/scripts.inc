@@ -7,8 +7,9 @@ LittlerootTown_MapScripts:: @ 81E7DCB
 	@ State descriptions for VAR_LITTLEROOT_TOWN_STATE
 	@ 1: Met Rival
 	@ 2: Saving Birch
-	@ 3: Received Pokedex
-	@ 4: Received Running Shoes
+	@ 3: Received Pokemon
+	@ 4: Received Pokedex
+	@ 5: Received Running Shoes
 
 	@ State descriptions for VAR_LITTLEROOT_INTRO_STATE
 	@ 1: In truck male
@@ -939,7 +940,7 @@ LittlerootTown_EventScript_Mom:: @ 81E863D
 LittlerootTown_EventScript_SetReceivedRunningShoes:: @ 81E8686
 	removeobject 4
 	setflag FLAG_SYS_B_DASH
-	setvar VAR_LITTLEROOT_TOWN_STATE, 4
+	setvar VAR_LITTLEROOT_TOWN_STATE, 5
 	release
 	end
 
@@ -980,8 +981,8 @@ LittlerootTown_Text_WearTheseRunningShoes: @ 81E87F0
 	.string "Oh! He did?! What an adorable POKéMON!\n"
 	.string "You're your father's child, all right.\p"
 	.string "You look good together with POKéMON!\n"
-	.string "Here, honey! If you're going out on an\n"
-	.string "adventure, wear these RUNNING SHOES.\p"
+	.string "Here, honey! If you're going out on\p"
+	.string "an adventure, wear these RUNNING SHOES.\n"
 	.string "They'll put a zip in your step!$"
 
 LittlerootTown_Text_SwitchShoesWithRunningShoes: @ 81E8925
@@ -1059,7 +1060,7 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab: @ 81E8DA2
 	.string "PROF. BIRCH: Well, well, {PLAYER}{KUN}!\n"
 	.string "That was good work out there!\p"
 	.string "I knew there was something special\n"
-	.string "about you when I first saw you,\l"
+	.string "about you when you first stepped out.\l"
 	.string "but I never expected this.\p"
 	.string "Oh, yes. Do you still have the POKéDEX\n"
 	.string "I gave you?\p"
@@ -1068,7 +1069,6 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab: @ 81E8DA2
 
 
 LittlerootTown_Text_StrangeHouse:
-	.string "No one's home. The sign says\p"
-	.string "they're on vacation.$"
+	.string "No one's home.$"
 
 

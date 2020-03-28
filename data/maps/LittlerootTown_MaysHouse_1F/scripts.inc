@@ -342,9 +342,8 @@ RivalsHouse_1F_Text_OhYoureTheNewNeighbor: @ 81F8BC5
 	.string "Our {STR_VAR_1} is upstairs, I think.$"
 
 RivalsHouse_1F_Text_LikeChildLikeFather: @ 81F8CA5
-	.string "Like child, like father.\p"
-	.string "My husband is as wild about POKéMON\n"
-	.string "as our child.\p"
+	.string "My husband is as wild about POKéMON\p"
+	.string "as our child.\n"
 	.string "If he's not at his LAB, he's likely\n"
 	.string "scrabbling about in grassy places.$"
 
@@ -357,8 +356,7 @@ RivalsHouse_1F_Text_TooBusyToNoticeVisit: @ 81F8D37
 RivalsHouse_1F_Text_WentOutToRoute103: @ 81F8D93
 	.string "Oh, {RIVAL} went out to ROUTE 103\n"
 	.string "just a little while ago.\p"
-	.string "Like father, like child.\n"
-	.string "{RIVAL} can't stay quietly at home.$"
+	.string "Like father, like child.$"
 
 RivalsHouse_1F_Text_ShouldGoHomeEverySoOften: @ 81F8E01
 	.string "I think it's wonderful for people to\n"
@@ -369,8 +367,7 @@ RivalsHouse_1F_Text_ShouldGoHomeEverySoOften: @ 81F8E01
 	.string "worries about you, {PLAYER}{KUN}.$"
 
 RivalsHouse_1F_Text_MayWhoAreYou: @ 81F8EC6
-	.string "Huh?\n"
-	.string "Who… Who are you?\p"
+	.string "Huh? Who are you?\p"
 	.string "… … … … … … … …\n"
 	.string "… … … … … … … …\p"
 	.string "Oh, you're {PLAYER}{KUN}.\n"
@@ -394,17 +391,15 @@ RivalsHouse_1F_Text_MayWhoAreYou: @ 81F8EC6
 
 RivalsHouse_1F_Text_BrendanWhoAreYou: @ 81F90B4
 	.string "Hey!\n"
-	.string "You…\p"
-	.string "Who are you?\p"
+	.string "Who are you?\n"
 	.string "Oh, you're {PLAYER}, aren't you?\n"
 	.string "Moved in next door, right?\p"
 	.string "I didn't know that you're a girl.\p"
 	.string "Dad, PROF. BIRCH, said that our new\n"
 	.string "next-door neighbor is a GYM LEADER's\l"
 	.string "kid, so I assumed you'd be a guy.\p"
-	.string "My name's BRENDAN.\n"
-	.string "So, hi, neighbor!\p"
-	.string "Huh? Hey, {PLAYER}, don't you have\n"
+	.string "My name's BRENDAN.\p"
+	.string "Huh? Hey, {PLAYER}, don't you have\p"
 	.string "a POKéMON?\p"
 	.string "Do you want me to go catch you one?\p"
 	.string "Aw, darn, I forgot…\p"
