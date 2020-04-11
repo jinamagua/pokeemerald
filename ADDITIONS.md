@@ -5,6 +5,10 @@ This file contains the changes and additions that were made after incorporating 
 
 # Additions
 
+## Future Generation Pokemon
+
+Many Pokemon from generations IV - VI can be now be caught in Hoenn. Likewise, pokemon from these generations will be sent out into battle by opponents.
+
 ## Storyline:
 
 There is a new neighbor in Littleroot Town for you to meet. However, they are not at home.

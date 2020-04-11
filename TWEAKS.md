@@ -3,7 +3,17 @@
 
 This file lists the changes made from the base game.
 
+## LittleRoot Town
+
+Birch no longer asks whether you want to see your rival.
+
+Mom gives you running shoes after getting your first pokemon.
+
 ## Mechanics
+
+### Running Shoes
+
+Running indoors is now possible.
 
 ### Money Lost After Whiting Out
 
@@ -22,3 +32,9 @@ Badges| Base Penalty
 6 | 144
 7 | 164
 8 | 196
+
+
+
+### Wild Pokemon
+
+Wild Pokemon are now 2+ levels higher. This makes it easier to train Pokemon to the level needed to fight trainers in the area.

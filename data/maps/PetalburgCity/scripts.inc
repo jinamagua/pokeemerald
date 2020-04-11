@@ -3,12 +3,10 @@ PetalburgCity_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, PetalburgCity_OnFrame
 	.byte 0
 
-PetalburgCity_OnTransition: @ 81DC2D7
+PetalburgCity_OnTransition: @81DC2D7
 	setflag FLAG_VISITED_PETALBURG_CITY
 	compare VAR_PETALBURG_CITY_STATE, 0
 	call_if_eq PetalburgCity_EventScript_MoveBoyToWestEntrance
-	compare VAR_PETALBURG_CITY_STATE, 2
-	call_if_eq PetalburgCity_EventScript_DisableMapNameAndMusic
 	compare VAR_PETALBURG_CITY_STATE, 4
 	call_if_eq PetalburgCity_EventScript_DisableMapNameAndMusic
 	compare VAR_PETALBURG_GYM_STATE, 8

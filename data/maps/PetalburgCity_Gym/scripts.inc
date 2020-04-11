@@ -76,7 +76,7 @@ PetalburgCity_Gym_EventScript_TurnPlayerNorth:: @ 8204995
 	end
 
 PetalburgCity_Gym_OnFrame: @ 820499A
-	map_script_2 VAR_PETALBURG_GYM_STATE, 1, PetalburgCity_Gym_EventScript_ReturnFromWallyTutorial
+	@map_script_2 VAR_PETALBURG_GYM_STATE, 1, PetalburgCity_Gym_EventScript_ReturnFromWallyTutorial
 	.2byte 0
 
 PetalburgCity_Gym_EventScript_ReturnFromWallyTutorial:: @ 82049A4
@@ -127,24 +127,127 @@ PetalburgCity_Gym_EventScript_Norman:: @ 82049F1
 
 PetalburgCity_Gym_EventScript_BeginWallyTutorialSouth:: @ 8204A80
 	setvar VAR_0x8008, 0
-	goto PetalburgCity_Gym_EventScript_BeginWallyTutorial
-	end
+	goto PetalburgCity_Gym_EventScript_MeetWally
 
 PetalburgCity_Gym_EventScript_BeginWallyTutorialNorth:: @ 8204A8B
 	setvar VAR_0x8008, 1
-	goto PetalburgCity_Gym_EventScript_BeginWallyTutorial
+	goto PetalburgCity_Gym_EventScript_MeetWally
 	end
 
 PetalburgCity_Gym_EventScript_BeginWallyTutorialWest:: @ 8204A96
 	setvar VAR_0x8008, 2
-	goto PetalburgCity_Gym_EventScript_BeginWallyTutorial
+	goto PetalburgCity_Gym_EventScript_MeetWally
 	end
 
 PetalburgCity_Gym_EventScript_BeginWallyTutorialEast:: @ 8204AA1
 	setvar VAR_0x8008, 3
-	goto PetalburgCity_Gym_EventScript_BeginWallyTutorial
+	goto PetalburgCity_Gym_EventScript_MeetWally
 	end
 
+PetalburgCity_Gym_EventScript_MeetWally::
+	addobject 10
+	playse SE_DOOR
+	compare VAR_0x8008, 0
+	call_if_eq PetalburgCity_Gym_EventScript_WallyArriveSouth
+	compare VAR_0x8008, 1
+	call_if_eq PetalburgCity_Gym_EventScript_WallyArriveNorth
+	compare VAR_0x8008, 2
+	call_if_eq PetalburgCity_Gym_EventScript_WallyArriveWestEast
+	compare VAR_0x8008, 3
+	call_if_eq PetalburgCity_Gym_EventScript_WallyArriveWestEast
+	msgbox PetalburgCity_Gym_Text_WallyIdLikeAPokemon, MSGBOX_DEFAULT
+	msgbox PetalburgCity_Gym_Text_DadOhYoureWallyRight, MSGBOX_DEFAULT
+	msgbox PetalburgCity_Gym_Text_WallyIveNeverCaughtAPokemon, MSGBOX_DEFAULT
+	msgbox PetalburgCity_Gym_Text_DadHmISee, MSGBOX_DEFAULT
+	compare VAR_0x8008, 0
+	call_if_eq PetalburgCity_Gym_EventScript_NormanAddressPlayerSouth
+	compare VAR_0x8008, 1
+	call_if_eq PetalburgCity_Gym_EventScript_NormanAddressPlayerNorth
+	compare VAR_0x8008, 2
+	call_if_eq PetalburgCity_Gym_EventScript_NormanAddressPlayerWest
+	compare VAR_0x8008, 3
+	call_if_eq PetalburgCity_Gym_EventScript_NormanAddressPlayerEast
+	msgbox PetalburgCity_Gym_Text_DadPlayerGoWithWally, MSGBOX_DEFAULT
+	compare VAR_0x8008, 0
+	call_if_eq PetalburgCity_Gym_EventScript_NormanAddressWallySouth
+	compare VAR_0x8008, 1
+	call_if_eq PetalburgCity_Gym_EventScript_NormanAddressWallyNorth
+	compare VAR_0x8008, 2
+	call_if_eq PetalburgCity_Gym_EventScript_NormanAddressWallyWest
+	compare VAR_0x8008, 3
+	call_if_eq PetalburgCity_Gym_EventScript_NormanAddressWallyEast
+	msgbox PetalburgCity_Gym_Text_IllLoanYouMyZigzagoon, MSGBOX_DEFAULT
+	msgbox PetalburgCity_Gym_Text_WallyThankYouAndDadGivesPokeBall, MSGBOX_DEFAULT
+	msgbox PetalburgCity_Gym_Text_WallyOhWowThankYou, MSGBOX_DEFAULT
+	compare VAR_0x8008, 0
+	call_if_eq PetalburgCity_Gym_EventScript_NormanFaceDoorSouth
+	compare VAR_0x8008, 1
+	call_if_eq PetalburgCity_Gym_EventScript_NormanFaceDoorNorth
+	compare VAR_0x8008, 2
+	call_if_eq PetalburgCity_Gym_EventScript_NormanFaceDoorWest
+	compare VAR_0x8008, 3
+	call_if_eq PetalburgCity_Gym_EventScript_NormanFaceDoorEast
+	compare VAR_0x8008, 0
+	call_if_eq PetalburgCity_Gym_EventScript_WallyFacePlayer
+	compare VAR_0x8008, 1
+	call_if_eq PetalburgCity_Gym_EventScript_WallyFaceDown
+	compare VAR_0x8008, 2
+	call_if_eq PetalburgCity_Gym_EventScript_WallyFacePlayer
+	compare VAR_0x8008, 3
+	call_if_eq PetalburgCity_Gym_EventScript_WallyFacePlayer
+	msgbox PetalburgCity_Gym_Text_WouldYouReallyComeWithMe, MSGBOX_DEFAULT
+	closemessage
+	@setflag FLAG_DONT_TRANSITION_MUSIC
+	@playbgm MUS_TSURETEK, 0
+	compare VAR_0x8008, 0
+	call_if_eq PetalburgCity_Gym_EventScript_ExitGymWithWallySouth
+	compare VAR_0x8008, 1
+	call_if_eq PetalburgCity_Gym_EventScript_ExitGymWithWallyNorth
+	compare VAR_0x8008, 2
+	call_if_eq PetalburgCity_Gym_EventScript_ExitGymWithWallyWest
+	compare VAR_0x8008, 3
+	call_if_eq PetalburgCity_Gym_EventScript_ExitGymWithWallyEast
+	setflag FLAG_HIDE_PETALBURG_CITY_WALLYS_AUNT
+	setvar VAR_PETALBURG_GYM_STATE, 1
+	setvar VAR_PETALBURG_CITY_STATE, 3
+	clearflag FLAG_HIDE_PETALBURG_CITY_WALLY
+	setflag FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_RIVAL
+	special InitBirchState
+	fadescreen 1
+	delay 10
+	setvar VAR_PETALBURG_GYM_STATE, 2
+	applymovement EVENT_OBJ_ID_PLAYER, PetalburgCity_Gym_Movement_ReturnToNorman
+	applymovement 10, PetalburgCity_Gym_Movement_ReturnToNorman
+	waitmovement 0
+	delay 10
+	fadescreen 0
+	msgbox PetalburgCity_Gym_Text_DadSoDidItWorkOut, MSGBOX_DEFAULT
+	msgbox PetalburgCity_Gym_Text_WallyThankYouBye, MSGBOX_DEFAULT
+	closemessage
+	applymovement EVENT_OBJ_ID_PLAYER, Common_Movement_WalkInPlaceFastestDown
+	applymovement 10, PetalburgCity_Gym_Movement_WallyExitGym
+	waitmovement 0
+	playse SE_KAIDAN
+	removeobject 10
+	setflag FLAG_HIDE_PETALBURG_GYM_WALLY
+	setflag FLAG_HIDE_PETALBURG_CITY_WALLY
+	delay 30
+	applymovement EVENT_OBJ_ID_PLAYER, Common_Movement_WalkInPlaceFastestUp
+	waitmovement 0
+	msgbox PetalburgCity_Gym_Text_DadGoCollectBadges, MSGBOX_DEFAULT
+	setvar VAR_PETALBURG_GYM_STATE, 2
+	releaseall
+	end
+
+
+PetalburgCity_Gym_Movement_ReturnToNorman:
+	walk_up
+	walk_up
+	walk_up
+	step_end
+	
+
+@ original wally script  
 PetalburgCity_Gym_EventScript_BeginWallyTutorial:: @ 8204AAC
 	addobject 10  @ Wally
 	playse SE_DOOR
@@ -1246,11 +1349,14 @@ PetalburgCity_Gym_Text_DadOhYoureWallyRight: @ 82058DB
 	.string "DAD: Hm? You're… Uh… Oh, right.\n"
 	.string "You're WALLY, right?$"
 
+PetalburgCity_Gym_Text_WallyIDKHowToCatchAPokemon:
+	.string "WALLY: I've never caught one before.$"
+
 PetalburgCity_Gym_Text_WallyIveNeverCaughtAPokemon: @ 8205910
 	.string "WALLY: I'm going to go stay with my\n"
 	.string "relatives in VERDANTURF TOWN.\p"
 	.string "I thought I would be lonely by myself,\n"
-	.string "so I wanted to take a POKéMON along.\p"
+	.string "so I wanted a POKéMON.\p"
 	.string "But I've never caught a POKéMON before.\n"
 	.string "I don't know how…$"
 
@@ -1258,21 +1364,19 @@ PetalburgCity_Gym_Text_DadHmISee: @ 82059D8
 	.string "DAD: Hm. I see.$"
 
 PetalburgCity_Gym_Text_DadPlayerGoWithWally: @ 82059E8
-	.string "DAD: {PLAYER}, you heard that,\n"
-	.string "right?\p"
+	.string "DAD: {PLAYER}, you know what?\p"
 	.string "Go with WALLY and make sure that he\n"
 	.string "safely catches a POKéMON.$"
 
 PetalburgCity_Gym_Text_IllLoanYouMyZigzagoon: @ 8205A46
-	.string "WALLY, here, I'll loan you my POKéMON.\p"
-	.string "WALLY received a ZIGZAGOON!$"
+	.string "WALLY, here, I'll loan you a POKéMON.\n"
+	.string "WALLY received the SLAKOTH!$"
 
 PetalburgCity_Gym_Text_WallyThankYouAndDadGivesPokeBall: @ 8205A89
-	.string "WALLY: Oh, wow!\n"
-	.string "A POKéMON!\p"
-	.string "DAD: Hm. I'll give you a POKé BALL, too.\n"
-	.string "Go for it!\p"
-	.string "WALLY received a POKé BALL!$"
+	.string "WALLY: Oh, wow! A POKéMON!\p"
+	.string "DAD: You'll need a POKé BALL, too.\n"
+	.string "WALLY recieved the POKé BALL!$"
+
 
 PetalburgCity_Gym_Text_WallyOhWowThankYou: @ 8205AF4
 	.string "WALLY: Oh, wow!\n"
