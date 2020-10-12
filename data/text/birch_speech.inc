@@ -18,7 +18,7 @@ gText_Birch_MainSpeech:: @ 82C8A1F
 	.string "know everything about POKéMON.\p"
 	.string "In fact, there are many, many\n"
 	.string "secrets surrounding POKéMON.\l"
-	.string "THis is what I research.\n"
+	.string "This is what I research.\n"
 	.string "$"
 
 gText_Birch_AndYouAre:: @ 82C8BD0

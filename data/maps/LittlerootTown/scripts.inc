@@ -142,7 +142,7 @@ LittlerootTown_EventScript_StepOffTruckFemale:: @ 81E7EF9
 	end
 
 LittlerootTown_EventScript_GoInsideWithMom:: @ 81E7F17
-	delay 15
+	delay 10
 	playse SE_DANSA
 	applymovement EVENT_OBJ_ID_PLAYER, LittlerootTown_Movement_PlayerStepOffTruck
 	waitmovement 0
@@ -153,7 +153,7 @@ LittlerootTown_EventScript_GoInsideWithMom:: @ 81E7F17
 	waitmovement 0
 	closedoor VAR_0x8004, VAR_0x8005
 	waitdooranim
-	delay 10
+	delay 5
 	applymovement 4, LittlerootTown_Movement_MomApproachPlayerAtTruck
 	waitmovement 0
 	msgbox LittlerootTown_Text_OurNewHomeLetsGoInside, MSGBOX_DEFAULT
@@ -962,13 +962,10 @@ LittlerootTown_EventScript_StrangeHouseSign::
 
 LittlerootTown_Text_OurNewHomeLetsGoInside: @ 81E86BC
 	.string "MOM: {PLAYER}, we're here, honey!\p"
-	.string "It must be tiring riding with our things\n"
-	.string "in the moving truck.\p"
-	.string "Well, this is LITTLEROOT TOWN.\p"
-	.string "How do you like it?\n"
-	.string "This is our new home!\p"
-	.string "It has a quaint feel, but it seems to be\n"
-	.string "an easy place to live, don't you think?\p"
+	.string "How was it riding with our things\n"
+	.string "in the moving truck?\p"
+	.string "Well, this is LITTLEROOT TOWN,\n"
+	.string "our new home!\p"
 	.string "And, you get your own room, {PLAYER}!\n"
 	.string "Let's go inside.$"
 
@@ -980,9 +977,8 @@ LittlerootTown_Text_WearTheseRunningShoes: @ 81E87F0
 	.string "introduce yourself to PROF. BIRCH?\p"
 	.string "Oh! He did?! What an adorable POKéMON!\n"
 	.string "You're your father's child, all right.\p"
-	.string "You look good together with POKéMON!\n"
-	.string "Here, honey! If you're going out on\p"
-	.string "an adventure, wear these RUNNING SHOES.\n"
+	.string "Here, honey! If you're going out on\n"
+	.string "an adventure, wear these RUNNING SHOES.\p"
 	.string "They'll put a zip in your step!$"
 
 LittlerootTown_Text_SwitchShoesWithRunningShoes: @ 81E8925

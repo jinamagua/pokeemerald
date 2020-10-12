@@ -699,11 +699,7 @@ LittlerootTown_ProfessorBirchsLab_Text_BirchAwayOnFieldwork: @ 81FA4E2
 	.string "Oh, let me explain what fieldwork is.\p"
 	.string "It is to study things in the natural\n"
 	.string "environment, like fields and mountains,\l"
-	.string "instead of a laboratory.\p"
-	.string "The PROF isn't one for doing desk work.\n"
-	.string "He's the type of person who would\l"
-	.string "rather go outside and experience\l"
-	.string "things than read about them here.$"
+	.string "instead of a laboratory.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_BirchIsntOneForDeskWork: @ 81FA641
 	.string "The PROF isn't one for doing desk work.\n"
@@ -720,7 +716,7 @@ LittlerootTown_ProfessorBirchsLab_Text_LikeYouToHavePokemon: @ 81FA74D
 	.string "PROF. BIRCH: So, {PLAYER}{KUN}.\p"
 	.string "I've heard so much about you from\n"
 	.string "your father.\p"
-	.string "I've heard that you don't have your\n"
+	.string "I know you don't have your\n"
 	.string "own POKéMON yet.\p"
 	.string "But the way you battled earlier,\n"
 	.string "you pulled it off with aplomb!\p"
