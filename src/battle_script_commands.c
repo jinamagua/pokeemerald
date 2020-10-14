@@ -804,60 +804,61 @@ static const u16 sMoveEffectsForbiddenToInstruct[] =
     INSTRUCT_FORBIDDEN_END
 };
 
+// Swift1 -> psybeam
+// hydro pump -> aerial ace
 static const u16 sNaturePowerMoves[] =
 {
     MOVE_STUN_SPORE,
     MOVE_RAZOR_LEAF,
     MOVE_EARTHQUAKE,
-    MOVE_HYDRO_PUMP,
+    MOVE_AERIAL_ACE,
     MOVE_SURF,
     MOVE_BUBBLE_BEAM,
     MOVE_ROCK_SLIDE,
     MOVE_SHADOW_BALL,
-    MOVE_SWIFT,
+    MOVE_PSYBEAM,
     MOVE_SWIFT
 };
 
 static const u16 sPickupItems[] =
 {
-    ITEM_POTION,
-    ITEM_ANTIDOTE,
+    ITEM_FRESH_WATER,
+    ITEM_HEAL_BALL,
     ITEM_SUPER_POTION,
-    ITEM_GREAT_BALL,
-    ITEM_REPEL,
-    ITEM_ESCAPE_ROPE,
-    ITEM_X_ATTACK,
     ITEM_FULL_HEAL,
+    ITEM_ESCAPE_ROPE,
+    ITEM_ESCAPE_ROPE,
+    ITEM_CALCIUM,
+    ITEM_HP_UP,
     ITEM_ULTRA_BALL,
-    ITEM_HYPER_POTION,
+    ITEM_CARBOS,
     ITEM_RARE_CANDY,
     ITEM_PROTEIN,
-    ITEM_REVIVE,
-    ITEM_HP_UP,
-    ITEM_FULL_RESTORE,
-    ITEM_MAX_REVIVE,
+    ITEM_ZINC,
+    ITEM_RARE_CANDY,
     ITEM_PP_UP,
+    ITEM_FULL_RESTORE,
+    ITEM_PP_UP, 
     ITEM_MAX_ELIXIR,
 };
 
 static const u16 sRarePickupItems[] =
 {
-    ITEM_HYPER_POTION,
-    ITEM_NUGGET,
+    ITEM_MAX_REPEL,
+    ITEM_STAR_PIECE,
     ITEM_KINGS_ROCK,
     ITEM_FULL_RESTORE,
-    ITEM_ETHER,
+    ITEM_PP_MAX,
     ITEM_WHITE_HERB,
-    ITEM_TM44_REST,
-    ITEM_ELIXIR,
-    ITEM_TM01_FOCUS_PUNCH,
+    ITEM_MASTER_BALL,
+    ITEM_RARE_CANDY,
     ITEM_LEFTOVERS,
     ITEM_TM26_EARTHQUAKE,
 };
 
 static const u8 sPickupProbabilities[] =
 {
-    30, 40, 50, 60, 70, 80, 90, 94, 98
+    30, 40, 55, 65, 75, 85, 90, 94, 96
 };
 
 static const u8 sTerrainToType[] =
@@ -3437,7 +3438,9 @@ static void Cmd_getexp(void)
                     viaExpShare++;
             }
 
-            calculatedExp = gBaseStats[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level / 7;
+            // Increase calculatedexp by 2
+            // a better multiplier would be  ~ 1.5 
+            calculatedExp = 2 * gBaseStats[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level / 7;
 
             if (viaExpShare) // at least one mon is getting exp via exp share
             {
@@ -11051,7 +11054,7 @@ static void Cmd_pickup(void)
                 && species != 0
                 && species != SPECIES_EGG
                 && heldItem == ITEM_NONE
-                && (Random() % 10) == 0)
+                && (Random() % 5) == 0)
             {
                 s32 j;
                 s32 rand = Random() % 100;

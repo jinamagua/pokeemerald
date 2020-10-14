@@ -37,11 +37,12 @@ EventScript_PkmnCenterNurse_IllTakeYourPkmn2:: @ 827198D
     message gText_IllTakeYourPkmn2
     return
 
+@ COMMENTED OUT HEALING ANIMATION FOR TEST RUNNING
 EventScript_PkmnCenterNurse_TakeAndHealPkmn:: @ 8271993
     applymovement VAR_0x800B, Common_Movement_WalkInPlaceFastestLeft
     waitmovement 0
-    dofieldeffect FLDEFF_POKECENTER_HEAL
-    waitfieldeffect FLDEFF_POKECENTER_HEAL
+    @ dofieldeffect FLDEFF_POKECENTER_HEAL
+    @ waitfieldeffect FLDEFF_POKECENTER_HEAL
     applymovement VAR_0x800B, Common_Movement_WalkInPlaceFastestDown
     waitmovement 0
     special HealPlayerParty
