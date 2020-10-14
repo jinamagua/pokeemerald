@@ -305,8 +305,7 @@ Route103_Text_MayLetsBattle: @ 81EC7DE
 	.string "a TRAINER is like.$"
 
 Route103_Text_MayDefeated: @ 81EC881
-	.string "Wow! That's great!\n"
-	.string "{PLAYER}{KUN}, you're pretty good!$"
+	.string "Wow... {PLAYER}{KUN}, you're pretty good!$"
 
 Route103_Text_MayTimeToHeadBack: @ 81EC8AE
 	.string "MAY: I think I know why my dad has\n"
