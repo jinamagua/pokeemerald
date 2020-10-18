@@ -303,8 +303,25 @@ Route104_EventScript_Girl1:: @ 81ED006
 	msgbox Route104_Text_BrineyLivesInSeasideCottage, MSGBOX_NPC
 	end
 
+
+@ Quest 1
 Route104_EventScript_BugCatcher:: @ 81ED00F
+	faceplayer
 	msgbox Route104_Text_WhatsItLikeAtBottomOfSea, MSGBOX_SIGN
+	msgbox Route104_Text_Quest_Watermon, MSGBOX_YESNO
+	compare VAR_RESULT, FALSE
+	goto_if_eq Route104_EventScript_BugCatcher_End
+	msgbox Route104_Text_Quest_Watermon_Select, MSGBOX_DEFAULT
+	special ChoosePartyMon
+	waitstate
+	specialvar VAR_RESULT, ScriptGetPartyMonSpecies
+	compare VAR_RESULT, SPECIES_BEEDRILL
+	goto_if_eq Route104_EventScript_BugCatcher_End
+	msgbox Route104_Text_Quest_No_Mons, MSGBOX_NPC
+	end
+
+Route104_EventScript_BugCatcher_End::
+	msgbox Route104_Text_One_Day, MSGBOX_SIGN
 	end
 
 Route104_EventScript_BrineysCottageSign:: @ 81ED018
@@ -803,7 +820,7 @@ Route104_Movement_SailToDewford: @ 81ED28C
 	walk_fastest_right
 	walk_fastest_right
 	walk_fastest_right
-	walk_fast_right
+	walk_fastest_right
 	walk_fast_right
 	walk_fast_right
 	walk_fast_right
@@ -1186,3 +1203,16 @@ Route104_Text_BrendanPostBattle: @ 81EE120
 	.string "making POKéMON battle.\p"
 	.string "Like MR. BRINEY, it's important to\n"
 	.string "become friends with your POKéMON.$"
+
+Route104_Text_Quest_Watermon:
+	.string "Do you have any deep sea POKéMON?\n"
+	.string "Will you show me?$"
+
+Route104_Text_One_Day:
+	.string "No problem. The quest goes on.$"
+
+Route104_Text_Quest_No_Mons:
+	.string "Aw, you don't have any deep sea POKéMON.$"
+
+Route104_Text_Quest_Watermon_Select: 
+	.string "Show me a grass POKéMON.$"
