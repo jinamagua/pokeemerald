@@ -305,23 +305,38 @@ Route104_EventScript_Girl1:: @ 81ED006
 
 
 @ Quest 1
-Route104_EventScript_BugCatcher:: @ 81ED00F
+Route104_EventScript_Boy_Quest:: @ 81ED00F
+	lock
 	faceplayer
-	msgbox Route104_Text_WhatsItLikeAtBottomOfSea, MSGBOX_SIGN
-	msgbox Route104_Text_Quest_Watermon, MSGBOX_YESNO
+	goto_if_set FLAG_ROUTE104_QUEST_COMPLETED, Route104_EventScript_Boy_Quest_Completed
+	msgbox Route104_Text_WhatsItLikeAtSea, MSGBOX_SIGN
+	msgbox Route104_Text_Quest_ShowMeWaterMon, MSGBOX_YESNO
 	compare VAR_RESULT, FALSE
-	goto_if_eq Route104_EventScript_BugCatcher_End
-	msgbox Route104_Text_Quest_Watermon_Select, MSGBOX_DEFAULT
+	goto_if_eq Route104_EventScript_Boy_Quest_Declined
+	@ msgbox Route104_Text_Quest_SelectWaterMon, MSGBOX_DEFAULT
 	special ChoosePartyMon
 	waitstate
 	specialvar VAR_RESULT, ScriptGetPartyMonSpecies
 	compare VAR_RESULT, SPECIES_BEEDRILL
-	goto_if_eq Route104_EventScript_BugCatcher_End
-	msgbox Route104_Text_Quest_No_Mons, MSGBOX_NPC
+	goto_if_eq Route104_EventScript_Boy_Quest_End
+	msgbox Route104_Text_Quest_NotWaterMon, MSGBOX_NPC
+	release
 	end
 
-Route104_EventScript_BugCatcher_End::
-	msgbox Route104_Text_One_Day, MSGBOX_SIGN
+Route104_EventScript_Boy_Quest_Completed::
+	msgbox Route104_Text_Quest_Thanks, MSGBOX_DEFAULT
+	release
+	end
+
+Route104_EventScript_Boy_Quest_Declined::
+	msgbox Route104_Text_Quest_OneDay, MSGBOX_DEFAULT
+	release
+	end
+
+Route104_EventScript_Boy_Quest_End::
+	msgbox Route104_Text_Quest_Thanks, MSGBOX_SIGN
+	setflag FLAG_ROUTE104_QUEST_COMPLETED
+	release
 	end
 
 Route104_EventScript_BrineysCottageSign:: @ 81ED018
@@ -575,14 +590,13 @@ Route104_Movement_SailToDewfordAfterDadCalls: @ 81ED22A
 	walk_fastest_down
 	walk_fastest_down
 	walk_fastest_down
+	walk_fastest_down
 	walk_fast_down
 	walk_fast_down
 	walk_fast_down
-	walk_fast_down
 	walk_fast_right
 	walk_fast_right
 	walk_fast_right
-	walk_fast_right
 	walk_fastest_right
 	walk_fastest_right
 	walk_fastest_right
@@ -623,7 +637,8 @@ Route104_Movement_SailToDewfordAfterDadCalls: @ 81ED22A
 	walk_fastest_right
 	walk_fastest_right
 	walk_fastest_right
-	walk_fast_right
+	walk_fastest_right
+	walk_fastest_right
 	walk_fast_right
 	walk_fast_right
 	walk_fast_right
@@ -654,11 +669,9 @@ Route104_Movement_SailToDewford: @ 81ED28C
 	walk_down
 	walk_down
 	walk_down
-	walk_down
 	walk_fast_down
 	walk_fast_down
 	walk_fast_down
-	walk_fast_down
 	walk_fastest_down
 	walk_fastest_down
 	walk_fastest_down
@@ -671,8 +684,10 @@ Route104_Movement_SailToDewford: @ 81ED28C
 	walk_fastest_down
 	walk_fastest_down
 	walk_fastest_down
-	walk_fast_down
-	walk_fast_down
+	walk_fastest_down
+	walk_fastest_down
+	walk_fastest_down
+	walk_fastest_down
 	walk_fast_down
 	walk_fast_down
 	walk_fast_right
@@ -688,7 +703,6 @@ Route104_Movement_SailToDewford: @ 81ED28C
 	walk_fast_down
 	walk_fast_down
 	walk_fast_down
-	walk_fast_down
 	walk_fastest_down
 	walk_fastest_down
 	walk_fastest_down
@@ -772,14 +786,15 @@ Route104_Movement_SailToDewford: @ 81ED28C
 	walk_fastest_down
 	walk_fastest_down
 	walk_fastest_down
-	walk_fast_down
+	walk_fastest_down
+	walk_fastest_down
 	walk_fast_down
 	walk_fast_down
 	walk_fast_down
 	walk_fast_right
 	walk_fast_right
 	walk_fast_right
-	walk_fast_right
+	walk_fastest_right
 	walk_fastest_right
 	walk_fastest_right
 	walk_fastest_right
@@ -1037,10 +1052,9 @@ Route104_Text_BrineyLivesInSeasideCottage: @ 81ED5EC
 	.string "He was once a mighty sailor who never\n"
 	.string "feared the sea, however stormy.$"
 
-Route104_Text_WhatsItLikeAtBottomOfSea: @ 81ED662
-	.string "The sea, huh?\p"
-	.string "I wonder what it's like at the bottom\n"
-	.string "of the sea?$"
+Route104_Text_WhatsItLikeAtSea: @ 81ED662
+	.string "I wonder what it's like out at sea?\n"
+	.string "Swimming alongside water POKéMON...$"
 
 Route104_Text_ThrowBallAtWeakenedPokemon: @ 81ED6A2
 	.string "If you're going to throw a POKé BALL,\n"
@@ -1204,15 +1218,20 @@ Route104_Text_BrendanPostBattle: @ 81EE120
 	.string "Like MR. BRINEY, it's important to\n"
 	.string "become friends with your POKéMON.$"
 
-Route104_Text_Quest_Watermon:
-	.string "Do you have any deep sea POKéMON?\n"
-	.string "Will you show me?$"
+Route104_Text_Quest_ShowMeWaterMon:
+	.string "Can you show me a MAGIKARP?$"
 
-Route104_Text_One_Day:
+Route104_Text_Quest_OneDay:
 	.string "No problem. The quest goes on.$"
 
-Route104_Text_Quest_No_Mons:
-	.string "Aw, you don't have any deep sea POKéMON.$"
+Route104_Text_Quest_NotWaterMon:
+	.string "Aw, that's not a MAGIKARP.$"
 
-Route104_Text_Quest_Watermon_Select: 
-	.string "Show me a grass POKéMON.$"
+Route104_Text_Quest_SelectWaterMon: 
+	.string "Show me a MAGIKARP.$"
+
+Route104_Text_Quest_Thanks:
+	.string "Wow! Thank you.$"
+
+Route104_Text_Quest_Completed:
+	.string "A sea full of MAGIKARP...$"
