@@ -7,11 +7,11 @@ GraniteCave_B2F_EventScript_Elaine::
 	end
 
 GraniteCave_Text_ElaineIntro:
-	.string "Hey, it's hard to train in this cave. I'm\p"
-	.string "glad I found another trainer.$"
+	.string "Hey, it's hard to train in this cave.\n"
+	.string "I'm so glad I found another trainer.$"
 
 GraniteCave_Text_ElaineDefeat:
 	.string "Aw! Back to the dark cave.$"
 
 GraniteCave_Text_ElainePostBattle:
-	.string "I should use FLASH...$"
+	.string "I should've used FLASH...$"

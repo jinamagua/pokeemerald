@@ -101,12 +101,12 @@ Route104_EventScript_MayEncounter:: @ 81ECD4B
 	setflag FLAG_REGISTER_RIVAL_POKENAV
 	msgbox Route104_Text_MayWeShouldRegister, MSGBOX_DEFAULT
 	closemessage
-	delay 30
+	delay 20
 	playfanfare MUS_ME_TORE_EYE
 	msgbox Route104_Text_RegisteredMay, MSGBOX_DEFAULT
 	waitfanfare
 	closemessage
-	delay 30
+	delay 20
 	setflag FLAG_ENABLE_RIVAL_MATCH_CALL
 	applymovement EVENT_OBJ_ID_PLAYER, Route104_Movement_PlayerFaceRival
 	applymovement 34, Route104_Movement_RivalWalkSlowLeft

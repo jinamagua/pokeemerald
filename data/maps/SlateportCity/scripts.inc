@@ -339,9 +339,37 @@ SlateportCity_EventScript_Woman2:: @ 81DCFDC
 	msgbox SlateportCity_Text_CantChangeTradeMonName, MSGBOX_NPC
 	end
 
-SlateportCity_EventScript_Sailor1:: @ 81DCFE5
-	msgbox SlateportCity_Text_SeaIsSoWet, MSGBOX_NPC
+@ SlateportCity_EventScript_Sailor1:: @ 81DCFE5
+@	msgbox SlateportCity_Text_SeaIsSoWet, MSGBOX_NPC
+@	end
+
+@ new sailor1 script 
+
+SlateportCity_EventScript_Sailor1::
+	lock
+	faceplayer
+	msgbox SlateportCity_Text_SeaIsSoWet, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq SlateportCity_EventScript_Sailor1_No
+	checkitem ITEM_OLD_ROD, 1
+	compare VAR_RESULT, 1
+	goto_if_eq SlateportCity_EventScript_Sailor1_TradeRod
+	msgbox SlateportCity_Text_NoRod, MSGBOX_NPC
+	release
 	end
+
+SlateportCity_EventScript_Sailor1_No::
+	msgbox SlateportCity_Text_SeaIsNoMore, MSGBOX_NPC
+	release
+	end
+
+SlateportCity_EventScript_Sailor1_TradeRod::
+	removeitem ITEM_OLD_ROD, 1
+	msgbox SlateportCity_Text_GiftedRod, MSGBOX_NPC
+	giveitem ITEM_TM03_WATER_PULSE, 1
+	release
+	end
+
 
 SlateportCity_EventScript_Sailor2:: @ 81DCFEE
 	msgbox SlateportCity_Text_SinkOldBoats, MSGBOX_NPC
@@ -1095,10 +1123,10 @@ SlateportCity_Text_HotSpringsAfterOperation: @ 81DDF8D
 	.string "That's what our leader said.\n"
 	.string "I can't wait!$"
 
-SlateportCity_Text_SeaIsSoWet: @ 81DDFF7
-	.string "The sea is just so vast…\p"
-	.string "Could the sea have been made by\n"
-	.string "the tears shed by POKéMON?$"
+@SlateportCity_Text_SeaIsSoWet: @ 81DDFF7
+@	.string "The sea is just so vast…\p"
+@	.string "Could the sea have been made by\n"
+@	.string "the tears shed by POKéMON?$"
 
 SlateportCity_Text_SinkOldBoats: @ 81DE04B
 	.string "Do you know what they do with old\n"
@@ -1375,3 +1403,20 @@ SlateportCity_Text_TakingBattleTentChallenge: @ 81DF28C
 	.string "After all, a tough TRAINER is\n"
 	.string "the perfect fit for the BATTLE TENT!\p"
 	.string "Give it your best effort!$"
+
+
+SlateportCity_Text_SeaIsSoWet: @ 81DDFF7
+	.string "The sea is just so vast…\p"
+	.string "It'd be nice to fish for POKéMON.\n"
+	.string "Would you trade me your OLD ROD?$"
+
+SlateportCity_Text_SeaIsNoMore:
+	.string "No problem.$"
+
+SlateportCity_Text_GiftedRod:
+	.string "Thank you! Here's a little something to\n"
+	.string "train your water POKéMON.$"
+
+SlateportCity_Text_NoRod:
+	.string "You don't have an OLD ROD. Perhaps\n"
+	.string "you can find one in DEWFORD.$"  
